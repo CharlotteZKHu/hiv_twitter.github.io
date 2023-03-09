@@ -40,7 +40,8 @@ polygonSeries.heatRules.push({
 polygonSeries.useGeodata = true;
 
 // Set up data source
-polygonSeries.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_web.github.io/main/data/state_index.json";
+// polygonSeries.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_web.github.io/main/data/state_index.json";
+polygonSeries.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/state_index.json";
 polygonSeries.dataSource.parser = new am4core.JSONParser();
 polygonSeries.dataSource.parser.options.useColumnNames = true;
 

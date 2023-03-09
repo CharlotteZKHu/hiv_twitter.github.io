@@ -5,7 +5,7 @@ var chart_1 = am4core.create("chartdiv_1", am4charts.XYChart);
 
 // Set up data source
 // chart.dataSource.url = "https://raw.githubusercontent.com/mdredze/covid19_social_mobility.github.io/master/data/longitudinal_compiled.csv";
-chart_1.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_web.github.io/main/data/hiv_test_longitudinal.csv";
+chart_1.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/hiv_test_longitudinal.csv";
 chart_1.dataSource.parser = new am4core.CSVParser();
 chart_1.dataSource.parser.options.useColumnNames = true;
 

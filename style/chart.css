@@ -1,0 +1,477 @@
+body {
+  padding: 0;
+  background: #faf9ef;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  text-align: center;
+  /* direction: rtl; */
+}
+
+
+/* Set the style of container div element */
+/* .Container{
+  height: 150px;
+  width: 250px;
+  overflow-y: auto;
+  background-color: green;
+  border-radius: 5px;
+  margin: 0 auto;
+} */
+
+/*This cause the division content to be displayed from right to left */
+/* .Flipped{
+  direction: rtl;
+} */
+
+/*--- navigation bar ---*/
+.navbar {
+  background: #faf9ef;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #00283d;
+  cursor: pointer;
+}
+
+.nav-link {
+  /* margin-right: 1em !important; */
+  justify-content: center;
+  border-bottom: 3px solid transparent
+}
+
+.nav-link:hover {
+  color: #9b1c1c;
+  border-bottom: 3px solid #042039;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/*--- column display ---*/
+* {
+  box-sizing: border-box;
+  /* box-sizing:content-box; */
+}
+
+/* Create columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 76%;
+  padding: 10px;
+}
+
+.column2 {
+  background: #faf9ef;
+  float: right;
+  width: 20%;
+  padding: 10px;
+  margin-top:30px;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* width */
+.container::-webkit-scrollbar {
+  width: 10px;
+  /* justify-content: center; */
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* hiv_testing */
+
+/* width */
+.container_1::-webkit-scrollbar {
+  width: 10px;
+  /* justify-content: center; */
+}
+
+/* Track */
+.container_1::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.container_1::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.container_1::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 3em;
+  margin: 0 0 0.1em 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0.3em 0 0.1em 0;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.6em;
+  margin: 0.3em 0 0.1em 0;
+}
+
+p {
+  font-weight: 250;
+  font-size: 1em;
+  margin: 0 20% 0.1em 20%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#chartdiv {
+  width: 90%;
+  margin: auto;
+  height: 400px;
+}
+
+#chartdiv_1 {
+  width: 90%;
+  margin: auto;
+  height: 400px;
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 0%;
+}
+
+#map_1 {
+  height: 0%;
+}
+
+#floating-panel {
+  display: none;
+}
+
+#floating-panel_1 {
+  display: none;
+}
+
+#latlng, #txtOutput, #stateOutput {
+  width: 100%;
+}
+
+#latlng_1, #txtOutput_1, #stateOutput_1 {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 49%;
+  float: left;
+  margin-left: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myInput_1 {
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 49%;
+  float: left;
+  margin-left: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  display: table;
+  border-collapse: collapse;
+  min-width: 100%;
+  border: 1px solid #042039;
+  font-size: 18px;
+  height: 200px;
+}
+
+
+#myTable:hover{
+  display: table;
+}
+
+#myTable th:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable td:hover {
+  background-color: #c4ac6a;
+  color: black;
+}
+
+#myTable_1 {
+  display: table;
+  min-width: 100%;
+  border: 1px solid #042039;
+  font-size: 18px;
+  height: 200px;
+}
+
+#myTable_1:hover{
+  display: table;
+}
+
+#myTable_1 th:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
+}
+
+#myTable_1 th, #myTable_1 td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable_1 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable_1 tr.header, #myTable_1 td:hover {
+  background-color: #c4ac6a;
+  color: black;
+}
+
+/*  */
+
+#myTable_2 {
+  display: table;
+  border-collapse: collapse;
+  min-width: 100%;
+  border: 1px solid #042039;
+  font-size: 18px;
+  height: 200px;
+}
+
+
+#myTable_2:hover{
+  display: table;
+}
+
+#myTable_2 th:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
+}
+
+#myTable_2 th, #myTable_2 td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable_2 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable_2 tr.header, #myTable_2 td:hover {
+  background-color: #c4ac6a;
+  color: black;
+}
+
+#myTable_3 {
+  display: table;
+  min-width: 100%;
+  border: 1px solid #042039;
+  font-size: 18px;
+  height: 200px;
+}
+
+#myTable_3:hover{
+  display: table;
+}
+
+#myTable_3 th:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
+}
+
+#myTable_3 th, #myTable_3 td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable_3 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable_3 tr.header, #myTable_3 td:hover {
+  background-color: #c4ac6a;
+  color: black;
+}
+
+#locbutton_1 {
+  background-image: url('locationpin.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-color: #9b1c1c;
+  color: white;
+  width: 20%;
+  float: right;
+  margin-right: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#locbutton {
+  background-image: url('locationpin.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-color: #9b1c1c;
+  color: white;
+  width: 20%;
+  float: right;
+  margin-right: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+
+.my-custom-scrollbar_1 {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  /* display: block; */
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-around; */
+}
+
+.table-wrapper-scroll-y_1 {
+  /* display: block; */
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-around; */
+}
+
+/* caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.page-footer {
+  background-color: #042039;
+  color: #faf9ef;
+  padding: 20px 0 10px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.footer-copyright {
+  color: #d4867e;
+  padding: 5px 0;
+}
+
+.footer-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.footer-img img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* #globe_chartdiv {
+  width: 76%;
+  height: 500px;
+  max-width: 76%;
+} */
+
+#globe_chartdiv {
+  max-width: 88%;
+  height: 600px;
+  background-color:#fbebdb;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#pie_chartdiv {
+  width: 80%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

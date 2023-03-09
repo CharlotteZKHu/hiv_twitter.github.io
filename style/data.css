@@ -1,0 +1,214 @@
+body {
+  padding: 0;
+  background: #faf9ef;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 3em;
+  margin: 0 0 0.1em 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2em;
+  margin: 1em 0 0.1em 0;
+}
+
+p, .datalist li {
+  font-weight: 250;
+  font-size: 1em;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/*--- navigation bar ---*/
+.navbar {
+  background: #faf9ef;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #00283d;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+  border-bottom: 3px solid transparent
+}
+
+.nav-link:hover {
+  color: #9b1c1c;
+  border-bottom: 3px solid #042039;
+}
+
+.nav-link:hover {
+  color: #9b1c1c;
+  background: #faf9ef;
+  border-bottom: 3px solid #042039;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/*--- footer ---*/
+.page-footer {
+  background-color: #042039;
+  color: #faf9ef;
+  padding: 20px 0 10px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.footer-copyright {
+  color: #d4867e;
+  padding: 5px 0;
+}
+
+.footer-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.footer-img img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*--- column display ---*/
+* {
+  box-sizing: border-box;
+}
+
+/* Create columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.column2 {
+  top: 10%;
+  float: right;
+  width: 29%;
+  padding: 10px;
+  border: 3px solid black;
+  height: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*--- bullet point ---*/
+ul.datalist {
+  list-style-position: outside;
+  text-align: left;
+}
+
+.variable {
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  color: #9b1c1c;
+  background: #ffe6e6;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*--- column 2 sidebar ---*/
+/* Style the sidenav links and the dropdown button */
+.column2 a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #042039;
+  display: block;
+  border: none;
+  background: #faf9ef;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.column2 a:hover, .dropdown-btn:hover {
+  color: #9b1c1c;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #9b1c1c;
+  color: #faf9ef;
+}
+
+.active:hover {
+  color: #faf9ef;
+}
+
+/* Dropdown container (hidden by default) */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.dropdown-container a {
+  font-size: 15px;
+}
+
+/* caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* download icon */
+.fa-download {
+  float: right;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/*--- Responsive layout - makes the two columns stack on top of each other
+instead of next to each other ---*/
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .column2, .column1 {
+    width: 100%;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}

@@ -6,7 +6,7 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 // Set up data source
 // chart.dataSource.url = "https://raw.githubusercontent.com/mdredze/covid19_social_mobility.github.io/master/data/longitudinal_compiled.csv";
 // chart.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/hiv_prep_longitudinal.csv";
-chart.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/hiv_test_longitudinal.csv";
+chart.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/hiv_prep_longitudinal.csv";
 chart.dataSource.parser = new am4core.CSVParser();
 chart.dataSource.parser.options.useColumnNames = true;
 
@@ -320,4 +320,4 @@ function tableText(tableCell) {
 
 
 // plot US avg by default
-createSeries("United States", "USA", "triangle", false);
+createSeries("United States Avg", "USA", "triangle", false);

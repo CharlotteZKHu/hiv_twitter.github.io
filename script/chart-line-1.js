@@ -319,4 +319,4 @@ function tableText_self(tableCell) {
 
 
 // plot US avg by default
-createSeries_self("United States", "USA", "triangle", false);
+createSeries_self("United States Avg", "USA", "triangle", false);

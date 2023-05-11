@@ -87,8 +87,8 @@ polygonTemplate.events.on("hit", function(ev) {
   var info = document.getElementById("info");
   info.innerHTML = "<h3>" + data.name + "<br>" + " (" + data.id + ")</h3>";
   if (data.id) {
-    info.innerHTML += "Average number of HIV Testing Tweets: " + data.HIV_Testing +
-    "<br>" + "Average number of HIV Prep Tweets: " + data.HIV_Prep +
+    info.innerHTML += "Average number of HIV-Testing Tweets: " + data.HIV_Testing +
+    "<br>" + "Average number of HIV-PrEP Tweets: " + data.HIV_Prep +
     "<br>" + "Average Total: " + data.value;
   } else {
     info.innerHTML += "<i>No description provided.</i>"

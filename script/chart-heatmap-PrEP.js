@@ -41,7 +41,7 @@ polygonSeries_p.useGeodata = true;
 
 // Set up data source
 // polygonSeries.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_web.github.io/main/data/state_index.json";
-polygonSeries_p.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/state_index.json";
+polygonSeries_p.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/state_index_PrEP.json";
 polygonSeries_p.dataSource.parser = new am4core.JSONParser();
 polygonSeries_p.dataSource.parser.options.useColumnNames = true;
 

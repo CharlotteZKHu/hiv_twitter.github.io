@@ -29,7 +29,7 @@ polygonSeries_t.heatRules.push({
   // dataField: "value",
   target: polygonSeries_t.mapPolygons.template,
   max: chart_t.colors.getIndex(1).brighten(1),
-  min: chart_t.colors.getIndex(1).brighten(-0.3)
+  min: chart_t.colors.getIndex(1).brighten(-0.6)
 });
 
 // polygonSeries.mapPolygons.template.events.on("pointerover", function(ev) {
@@ -41,7 +41,7 @@ polygonSeries_t.useGeodata = true;
 
 // Set up data source
 // polygonSeries.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_web.github.io/main/data/state_index.json";
-polygonSeries_t.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/state_index.json";
+polygonSeries_t.dataSource.url = "https://raw.githubusercontent.com/CharlotteZKHu/hiv_twitter.github.io/main/data/state_index_test.json";
 polygonSeries_t.dataSource.parser = new am4core.JSONParser();
 polygonSeries_t.dataSource.parser.options.useColumnNames = true;
 

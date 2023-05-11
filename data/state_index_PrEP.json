@@ -1,0 +1,308 @@
+[
+    {
+        "id": "US-AL",
+        "HIV_Testing": 4583,
+        "value": 703,
+        "total": 5286
+    },
+    {
+        "id": "US-AK",
+        "HIV_Testing": 475,
+        "value": 119,
+        "total": 594
+    },
+    {
+        "id": "US-AZ",
+        "HIV_Testing": 5486,
+        "value": 886,
+        "total": 6372
+    },
+    {
+        "id": "US-AR",
+        "HIV_Testing": 1171,
+        "value": 163,
+        "total": 1334
+    },
+    {
+        "id": "US-CA",
+        "HIV_Testing": 54519,
+        "value": 18299,
+        "total": 72818
+    },
+    {
+        "id": "US-CO",
+        "HIV_Testing": 5799,
+        "value": 1298,
+        "total": 7097
+    },
+    {
+        "id": "US-CT",
+        "HIV_Testing": 2875,
+        "value": 669,
+        "total": 3544
+    },
+    {
+        "id": "US-DE",
+        "HIV_Testing": 596,
+        "value": 70,
+        "total": 666
+    },
+    {
+        "id": "US-FL",
+        "HIV_Testing": 36026,
+        "value": 8418,
+        "total": 44444
+    },
+    {
+        "id": "US-GA",
+        "HIV_Testing": 32056,
+        "value": 5805,
+        "total": 37861
+    },
+    {
+        "id": "US-HI",
+        "HIV_Testing": 3596,
+        "value": 1763,
+        "total": 5359
+    },
+    {
+        "id": "US-ID",
+        "HIV_Testing": 1132,
+        "value": 84,
+        "total": 1216
+    },
+    {
+        "id": "US-IL",
+        "HIV_Testing": 15672,
+        "value": 3725,
+        "total": 19397
+    },
+    {
+        "id": "US-IN",
+        "HIV_Testing": 5460,
+        "value": 683,
+        "total": 6143
+    },
+    {
+        "id": "US-IA",
+        "HIV_Testing": 1314,
+        "value": 240,
+        "total": 1554
+    },
+    {
+        "id": "US-KS",
+        "HIV_Testing": 1644,
+        "value": 204,
+        "total": 1848
+    },
+    {
+        "id": "US-KY",
+        "HIV_Testing": 3169,
+        "value": 270,
+        "total": 3439
+    },
+    {
+        "id": "US-LA",
+        "HIV_Testing": 5453,
+        "value": 653,
+        "total": 6106
+    },
+    {
+        "id": "US-ME",
+        "HIV_Testing": 214,
+        "value": 79,
+        "total": 293
+    },
+    {
+        "id": "US-MD",
+        "HIV_Testing": 11975,
+        "value": 2126,
+        "total": 14101
+    },
+    {
+        "id": "US-MA",
+        "HIV_Testing": 8170,
+        "value": 2735,
+        "total": 10905
+    },
+    {
+        "id": "US-MI",
+        "HIV_Testing": 7609,
+        "value": 1218,
+        "total": 8827
+    },
+    {
+        "id": "US-MN",
+        "HIV_Testing": 3074,
+        "value": 729,
+        "total": 3803
+    },
+    {
+        "id": "US-MS",
+        "HIV_Testing": 1584,
+        "value": 179,
+        "total": 1763
+    },
+    {
+        "id": "US-MO",
+        "HIV_Testing": 4858,
+        "value": 840,
+        "total": 5698
+    },
+    {
+        "id": "US-MT",
+        "HIV_Testing": 586,
+        "value": 76,
+        "total": 662
+    },
+    {
+        "id": "US-NE",
+        "HIV_Testing": 1299,
+        "value": 193,
+        "total": 1492
+    },
+    {
+        "id": "US-NV",
+        "HIV_Testing": 6289,
+        "value": 748,
+        "total": 7037
+    },
+    {
+        "id": "US-NH",
+        "HIV_Testing": 1798,
+        "value": 396,
+        "total": 2194
+    },
+    {
+        "id": "US-NJ",
+        "HIV_Testing": 8556,
+        "value": 3150,
+        "total": 11706
+    },
+    {
+        "id": "US-NM",
+        "HIV_Testing": 1653,
+        "value": 214,
+        "total": 1867
+    },
+    {
+        "id": "US-NY",
+        "HIV_Testing": 49510,
+        "value": 19569,
+        "total": 69079
+    },
+    {
+        "id": "US-NC",
+        "HIV_Testing": 9332,
+        "value": 2181,
+        "total": 11513
+    },
+    {
+        "id": "US-ND",
+        "HIV_Testing": 439,
+        "value": 57,
+        "total": 496
+    },
+    {
+        "id": "US-OH",
+        "HIV_Testing": 13510,
+        "value": 2778,
+        "total": 16288
+    },
+    {
+        "id": "US-OK",
+        "HIV_Testing": 2143,
+        "value": 292,
+        "total": 2435
+    },
+    {
+        "id": "US-OR",
+        "HIV_Testing": 3528,
+        "value": 646,
+        "total": 4174
+    },
+    {
+        "id": "US-PA",
+        "HIV_Testing": 12153,
+        "value": 4471,
+        "total": 16624
+    },
+    {
+        "id": "US-RI",
+        "HIV_Testing": 1285,
+        "value": 269,
+        "total": 1554
+    },
+    {
+        "id": "US-SC",
+        "HIV_Testing": 3520,
+        "value": 982,
+        "total": 4502
+    },
+    {
+        "id": "US-SD",
+        "HIV_Testing": 197,
+        "value": 33,
+        "total": 230
+    },
+    {
+        "id": "US-TN",
+        "HIV_Testing": 6787,
+        "value": 1035,
+        "total": 7822
+    },
+    {
+        "id": "US-TX",
+        "HIV_Testing": 27925,
+        "value": 5160,
+        "total": 33085
+    },
+    {
+        "id": "US-UT",
+        "HIV_Testing": 3217,
+        "value": 425,
+        "total": 3642
+    },
+    {
+        "id": "US-VT",
+        "HIV_Testing": 443,
+        "value": 53,
+        "total": 496
+    },
+    {
+        "id": "US-VA",
+        "HIV_Testing": 7465,
+        "value": 1140,
+        "total": 8605
+    },
+    {
+        "id": "US-WA",
+        "HIV_Testing": 5276,
+        "value": 1679,
+        "total": 6955
+    },
+    {
+        "id": "US-WV",
+        "HIV_Testing": 981,
+        "value": 111,
+        "total": 1092
+    },
+    {
+        "id": "US-WI",
+        "HIV_Testing": 2306,
+        "value": 578,
+        "total": 2884
+    },
+    {
+        "id": "US-WY",
+        "HIV_Testing": 139,
+        "value": 19,
+        "total": 158
+    },
+    {
+        "id": "US_AVG",
+        "HIV_Testing": 7776.94,
+        "value": 1964.26,
+        "total": 9741.20
+    } 
+]

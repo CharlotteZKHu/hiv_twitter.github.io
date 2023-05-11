@@ -475,3 +475,25 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+#pieUS_chartdiv {
+  width: 80%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#heatchartdiv {
+  width: 75%;
+  height: 500px
+}
+
+#heatPrEPdiv {
+  width: 100%;
+  height: 500px
+}
+
+#heatTestdiv {
+  width: 100%;
+  height: 500px
+}

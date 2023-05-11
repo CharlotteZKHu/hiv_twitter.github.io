@@ -1,0 +1,308 @@
+[
+    {
+        "id": "US-AL",
+        "value": 4583,
+        "HIV_Prep": 703,
+        "total": 5286
+    },
+    {
+        "id": "US-AK",
+        "value": 475,
+        "HIV_Prep": 119,
+        "total": 594
+    },
+    {
+        "id": "US-AZ",
+        "value": 5486,
+        "HIV_Prep": 886,
+        "total": 6372
+    },
+    {
+        "id": "US-AR",
+        "value": 1171,
+        "HIV_Prep": 163,
+        "total": 1334
+    },
+    {
+        "id": "US-CA",
+        "value": 54519,
+        "HIV_Prep": 18299,
+        "total": 72818
+    },
+    {
+        "id": "US-CO",
+        "value": 5799,
+        "HIV_Prep": 1298,
+        "total": 7097
+    },
+    {
+        "id": "US-CT",
+        "value": 2875,
+        "HIV_Prep": 669,
+        "total": 3544
+    },
+    {
+        "id": "US-DE",
+        "value": 596,
+        "HIV_Prep": 70,
+        "total": 666
+    },
+    {
+        "id": "US-FL",
+        "value": 36026,
+        "HIV_Prep": 8418,
+        "total": 44444
+    },
+    {
+        "id": "US-GA",
+        "value": 32056,
+        "HIV_Prep": 5805,
+        "total": 37861
+    },
+    {
+        "id": "US-HI",
+        "value": 3596,
+        "HIV_Prep": 1763,
+        "total": 5359
+    },
+    {
+        "id": "US-ID",
+        "value": 1132,
+        "HIV_Prep": 84,
+        "total": 1216
+    },
+    {
+        "id": "US-IL",
+        "value": 15672,
+        "HIV_Prep": 3725,
+        "total": 19397
+    },
+    {
+        "id": "US-IN",
+        "value": 5460,
+        "HIV_Prep": 683,
+        "total": 6143
+    },
+    {
+        "id": "US-IA",
+        "value": 1314,
+        "HIV_Prep": 240,
+        "total": 1554
+    },
+    {
+        "id": "US-KS",
+        "value": 1644,
+        "HIV_Prep": 204,
+        "total": 1848
+    },
+    {
+        "id": "US-KY",
+        "value": 3169,
+        "HIV_Prep": 270,
+        "total": 3439
+    },
+    {
+        "id": "US-LA",
+        "value": 5453,
+        "HIV_Prep": 653,
+        "total": 6106
+    },
+    {
+        "id": "US-ME",
+        "value": 214,
+        "HIV_Prep": 79,
+        "total": 293
+    },
+    {
+        "id": "US-MD",
+        "value": 11975,
+        "HIV_Prep": 2126,
+        "total": 14101
+    },
+    {
+        "id": "US-MA",
+        "value": 8170,
+        "HIV_Prep": 2735,
+        "total": 10905
+    },
+    {
+        "id": "US-MI",
+        "value": 7609,
+        "HIV_Prep": 1218,
+        "total": 8827
+    },
+    {
+        "id": "US-MN",
+        "value": 3074,
+        "HIV_Prep": 729,
+        "total": 3803
+    },
+    {
+        "id": "US-MS",
+        "value": 1584,
+        "HIV_Prep": 179,
+        "total": 1763
+    },
+    {
+        "id": "US-MO",
+        "value": 4858,
+        "HIV_Prep": 840,
+        "total": 5698
+    },
+    {
+        "id": "US-MT",
+        "value": 586,
+        "HIV_Prep": 76,
+        "total": 662
+    },
+    {
+        "id": "US-NE",
+        "value": 1299,
+        "HIV_Prep": 193,
+        "total": 1492
+    },
+    {
+        "id": "US-NV",
+        "value": 6289,
+        "HIV_Prep": 748,
+        "total": 7037
+    },
+    {
+        "id": "US-NH",
+        "value": 1798,
+        "HIV_Prep": 396,
+        "total": 2194
+    },
+    {
+        "id": "US-NJ",
+        "value": 8556,
+        "HIV_Prep": 3150,
+        "total": 11706
+    },
+    {
+        "id": "US-NM",
+        "value": 1653,
+        "HIV_Prep": 214,
+        "total": 1867
+    },
+    {
+        "id": "US-NY",
+        "value": 49510,
+        "HIV_Prep": 19569,
+        "total": 69079
+    },
+    {
+        "id": "US-NC",
+        "value": 9332,
+        "HIV_Prep": 2181,
+        "total": 11513
+    },
+    {
+        "id": "US-ND",
+        "value": 439,
+        "HIV_Prep": 57,
+        "total": 496
+    },
+    {
+        "id": "US-OH",
+        "value": 13510,
+        "HIV_Prep": 2778,
+        "total": 16288
+    },
+    {
+        "id": "US-OK",
+        "value": 2143,
+        "HIV_Prep": 292,
+        "total": 2435
+    },
+    {
+        "id": "US-OR",
+        "value": 3528,
+        "HIV_Prep": 646,
+        "total": 4174
+    },
+    {
+        "id": "US-PA",
+        "value": 12153,
+        "HIV_Prep": 4471,
+        "total": 16624
+    },
+    {
+        "id": "US-RI",
+        "value": 1285,
+        "HIV_Prep": 269,
+        "total": 1554
+    },
+    {
+        "id": "US-SC",
+        "value": 3520,
+        "HIV_Prep": 982,
+        "total": 4502
+    },
+    {
+        "id": "US-SD",
+        "value": 197,
+        "HIV_Prep": 33,
+        "total": 230
+    },
+    {
+        "id": "US-TN",
+        "value": 6787,
+        "HIV_Prep": 1035,
+        "total": 7822
+    },
+    {
+        "id": "US-TX",
+        "value": 27925,
+        "HIV_Prep": 5160,
+        "total": 33085
+    },
+    {
+        "id": "US-UT",
+        "value": 3217,
+        "HIV_Prep": 425,
+        "total": 3642
+    },
+    {
+        "id": "US-VT",
+        "value": 443,
+        "HIV_Prep": 53,
+        "total": 496
+    },
+    {
+        "id": "US-VA",
+        "value": 7465,
+        "HIV_Prep": 1140,
+        "total": 8605
+    },
+    {
+        "id": "US-WA",
+        "value": 5276,
+        "HIV_Prep": 1679,
+        "total": 6955
+    },
+    {
+        "id": "US-WV",
+        "value": 981,
+        "HIV_Prep": 111,
+        "total": 1092
+    },
+    {
+        "id": "US-WI",
+        "value": 2306,
+        "HIV_Prep": 578,
+        "total": 2884
+    },
+    {
+        "id": "US-WY",
+        "value": 139,
+        "HIV_Prep": 19,
+        "total": 158
+    },
+    {
+        "id": "US_AVG",
+        "value": 7776.94,
+        "HIV_Prep": 1964.26,
+        "total": 9741.20
+    } 
+]

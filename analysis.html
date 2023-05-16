@@ -41,9 +41,9 @@
         <li class="nav-item">
           <a class="nav-link" href="analysis.html">Analysis</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="data.html">Data</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item">
           <a class="nav-link" href="relatedproj.html">Related Projects</a>
         </li> -->
@@ -57,7 +57,674 @@
     We analyze real time trends for pre-exposure prophylaxis(PrEP) and HIV testing using public tweets.
   </p>
 
-  <h2>HIV Prep Measure</h2>
+  <h2>HIV-Testing Measure</h2>
+  <div id="chartdiv_1" style="height:430px;"></div>
+
+
+  <!--onblur="document.getElementById('myTable').style.display='none';"
+   onfocus="document.getElementById('myTable').style.display='inherit';"-->
+  <!-- <input type="text" onfocus="document.getElementById('myTable_2').style.display='table';" id="myInput_1" onkeyup="searchFunction_self()" placeholder="Add a City, State, or Region..." title="Location Search Bar">
+  <button id="locbutton_1" onclick="getLocation_self()">Add My State</button> -->
+
+  <p id="demo_1"></p>
+
+  <div id="floating-panel_1">
+    <input id="latlng_1" type="text">
+    <input id="txtOutput_1" type="text">
+    <input id="stateOutput_1" type="text">
+  </div>
+
+  <div id="map_1"></div>
+
+  <div class="container table-wrapper-scroll-y_1 my-custom-scrollbar_1" style="width: 100%; cursor: pointer;">
+    <table id="myTable_2" style="min-width: 50%; cursor: pointer;">
+
+      <tr class="header">
+        <!-- <th onclick="sortTable_self(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th> -->
+        <th onclick="sortTable_self(1)" style="width:50%;">State <i class="fa fa-caret-down"></i></th>
+        <!-- <th onclick="sortTable_self(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
+      </tr>
+    
+          <tr>
+            <!-- <td>Albuquerque</td> -->
+            <td>NM - New Mexico</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Anaheim</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Anchorage</td> -->
+            <td>AK - Alaska</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Arlington</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Atlanta</td> -->
+            <td>GA - Georgia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Aurora</td> -->
+            <td>CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Austin</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Bakersfield</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Baltimore</td> -->
+            <td>MD - Maryland</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Baton Rouge</td> -->
+            <td>LA - Louisiana</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Boise</td> -->
+            <td>ID - Idaho</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Boston</td> -->
+            <td>MA - Massachusetts</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Buffalo</td> -->
+            <td>NY - New York</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chandler</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Charlotte</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chesapeake</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chicago</td> -->
+            <td>IL - Illinois</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chula Vista</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Cincinnati</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Cleveland</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Colorado Springs</td> -->
+            <td class="s1">CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Columbus</td> -->
+            <td>South Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Corpus Christi</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Dallas</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Denver</td> -->
+            <td>CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Detroit</td> -->
+            <td>MI - Michigan</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Durham</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <!-- <td>El Paso</td> -->
+          <td>TX - Texas</td>
+          <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fort Wayne</td> -->
+            <td>IN - Indiana</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fort Worth</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fremont</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fresno</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Garland</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Gilbert</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Glendale</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Greensboro</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Henderson</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Hialeah</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Honolulu</td> -->
+            <td>HI - Hawaii</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Houston</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Indianapolis</td> -->
+            <td>IN - Indiana</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Irvine</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Irving</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Jacksonville</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Jersey City</td> -->
+            <td>NJ - New Jersey</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Kansas City</td> -->
+            <td>MO - Missouri</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Laredo</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Las Vegas</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lexington</td> -->
+            <td>KY - Kentucky</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lincoln</td> -->
+            <td>NE - Nebraska</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Long Beach</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Los Angeles</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Louisville</td> -->
+            <td>KY - Kentucky</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lubbock</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Madison</td> -->
+            <td>WI - Wisconsin</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Memphis</td> -->
+            <td>TN - Tennessee</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Mesa</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Miami</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Milwaukee</td> -->
+            <td>WI - Wisconsin</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Minneapolis</td> -->
+            <td>MN - Minnesota</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Nashville</td> -->
+            <td>TN - Tennessee</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>New York City</td> -->
+            <td>NY - New York</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>New Orleans</td> -->
+            <td>LA - Louisiana</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Newark</td> -->
+            <td>NJ - New Jersey</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Norfolk</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>North Las Vegas</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Oakland</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Oklahoma City</td> -->
+            <td>OK - Oklahoma</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Omaha</td> -->
+            <td>NE - Nebraska</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Orlando</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Philadelphia</td> -->
+            <td>PA - Pennsylvania</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Phoenix</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Pittsburgh</td> -->
+            <td>PA - Pennsylvania</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Plano</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Portland</td> -->
+            <td>OR - Oregon</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Raleigh</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Reno</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Richmond</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Riverside</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Sacramento</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Antonio</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Diego</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Francisco</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Jose</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Santa Ana</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Scottsdale</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Seattle</td> -->
+            <td>WA - Washington</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Spokane</td> -->
+            <td>WA - Washington</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Louis</td> -->
+            <td>MO - Missouri</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Paul</td> -->
+            <td>MN - Minnesota</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Petersburg</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Stockton</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tampa</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Toledo</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tucson</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tulsa</td> -->
+            <td>OK - Oklahoma</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Virginia Beach</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Washington</td> -->
+            <td>DC - Washington DC</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Wichita</td> -->
+            <td>KS - Kansas</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Winston-Salem</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>CT - Connecticut</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>DE - Delaware</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>ME - Maine</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>NH - New Hampshire</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>RI - Rhode Island</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td> </td> -->
+            <td>VT - Vermont</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>IA - Iowa</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>AR - Arkansas</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>MS - Missouri</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>MT - Montana</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>ND - North Dakota</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>SD - South Dakota</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>UT - Utah</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>WY - Wyoming</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>AL - Alabama</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>WV - West Virigina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>PR - Puerto Rico</td>
+            <!-- <td>Caribbean</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>VI - Virgin Islands</td>
+            <!-- <td>Caribbean</td> -->
+          </tr>
+        </table>
+
+        <table id="myTable_3" style="min-width: 50%; cursor: pointer;">
+
+          <tr class="header">
+            <th onclick="sortTable_self(0)" style="width:50%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
+          </tr>
+        <tr>
+          <td>test</td>
+        </tr>
+        <tr>
+          <td>tests</td>
+        </tr>
+        <tr>
+          <td>tested</td>
+        </tr>
+        <tr>
+          <td>testing</td>
+        </tr>
+        <tr>
+          <td>oraquick</td>
+        </tr>
+    
+        </table>
+      </div>
+
+  <div style="margin:1em;"></div>
+  <!-- <p>
+    Undo: findings. 
+  </p> -->
+
+
+  <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div>
+
+  <!-- <h2>Average HIV-prep and test Tweets by State</h2>
+  <p>Use this figure to compare total number of tweets by area.
+  </p>
+  <div class="row">
+    <div class="column1" id="heatchartdiv" style="height:430px;"></div>
+    <div class="column2">
+      <h3 style="text-decoration: underline;">Statistics by State:</h3>
+      <div id="info"></div>
+    </div>
+  </div>
+  <div style="margin:2em;"></div> -->
+
+  <div style="margin:1em;"></div>
+
+  <!-- <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div> -->
+
+  <h2>HIV-PrEP Measure</h2>
   <div id="chartdiv" style="height:430px;"></div>
 
 
@@ -77,608 +744,608 @@
   <div id="map"></div>
 
   <div class="container table-wrapper-scroll-y my-custom-scrollbar" style="width: 100%; cursor: pointer;">
-    <table id="myTable" style="min-width: 66%; cursor: pointer;">
+    <table id="myTable" style="min-width: 50%; cursor: pointer;">
 
       <tr class="header">
-        <th onclick="sortTable(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th>
-        <th onclick="sortTable(1)" style="width:33%;">State <i class="fa fa-caret-down"></i></th>
-        <!-- <th onclick="sortTable(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
-      </tr>
-
-      <tr>
-        <td>NM-Albuquerque</td>
-        <td>NM - New Mexico</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA-Anaheim</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AK - Anchorage</td>
-        <td>AK - Alaska</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Arlington</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>GA - Atlanta</td>
-        <td>GA - Georgia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CO - Aurora</td>
-        <td>CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>TX - Austin</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Bakersfield</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>MD - Baltimore</td>
-        <td>MD - Maryland</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>LA - Baton Rouge</td>
-        <td>LA - Louisiana</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>ID - Boise</td>
-        <td>ID - Idaho</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>MA - Boston</td>
-        <td>MA - Massachusetts</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>NY - Buffalo</td>
-        <td>NY - New York</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Chandler</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Charlotte</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>VA - Chesapeake</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IL - Chicago</td>
-        <td>IL - Illinois</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CA - Chula Vista</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OH - Cincinnati</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>OH - Cleveland</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CO - Colorado Springs</td>
-        <td class="s1">CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>SC - Columbus</td>
-        <td>SC - South Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>TX - Corpus Christi</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>TX - Dallas</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CO - Denver</td>
-        <td>CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>MI - Detroit</td>
-        <td>MI - Michigan</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>NC - Durham</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <td>TX - El Paso</td>
-      <td>TX - Texas</td>
-      <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IN - Fort Wayne</td>
-        <td>IN - Indiana</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Fort Worth</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Fremont</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Fresno</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Garland</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Gilbert</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Glendale</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Greensboro</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Henderson</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>FL - Hialeah</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>HI - Honolulu</td>
-        <td>HI - Hawaii</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Houston</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IN - Indianapolis</td>
-        <td>IN - Indiana</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CA - Irvine</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Irving</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>FL - Jacksonville</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NJ - Jersey City</td>
-        <td>NJ - New Jersey</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>MO - Kansas City</td>
-        <td>MO - Missouri</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Laredo</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Las Vegas</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>KY - Lexington</td>
-        <td>KY - Kentucky</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>NE - Lincoln</td>
-        <td>NE - Nebraska</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA - Long Beach</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>Los Angeles</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>KY - Louisville</td>
-        <td>KY - Kentucky</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Lubbock</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>WI - Madison</td>
-        <td>WI - Wisconsin</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TN - Memphis</td>
-        <td>TN - Tennessee</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Mesa</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>FL - Miami</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>WI - Milwaukee</td>
-        <td>WI - Wisconsin</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>MN - Minneapolis</td>
-        <td>MN - Minnesota</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TN - Nashville</td>
-        <td>TN - Tennessee</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NY - New York City</td>
-        <td>NY - New York</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>LA - New Orleans</td>
-        <td>LA - Louisiana</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NJ - Newark</td>
-        <td>NJ - New Jersey</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>VA - Norfolk</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - North Las Vegas</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA - Oakland</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OK - Oklahoma City</td>
-        <td>OK - Oklahoma</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>NE - Omaha</td>
-        <td>NE - Nebraska</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>FL - Orlando</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>PA - Philadelphia</td>
-        <td>PA - Pennsylvania</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Phoenix</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>PA - Pittsburgh</td>
-        <td>PA - Pennsylvania</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>TX - Plano</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>OR - Portland</td>
-        <td>OR - Oregon</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Raleigh</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Reno</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>VA - Richmond</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Riverside</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Sacramento</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - San Antonio</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>San Diego</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - San Francisco</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - San Jose</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Santa Ana</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Scottsdale</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>WA - Seattle</td>
-        <td>WA - Washington</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>WA - Spokane</td>
-        <td>WA - Washington</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>MO - St Louis</td>
-        <td>MO - Missouri</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>MN - St Paul</td>
-        <td>MN - Minnesota</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>FL - St Petersburg</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Stockton</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>FL - Tampa</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>OH - Toledo</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Tucson</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OK - Tulsa</td>
-        <td>OK - Oklahoma</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>VA - Virginia Beach</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>DC - Washington</td>
-        <td>DC - Washington DC</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>KS - Wichita</td>
-        <td>KS - Kansas</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>NC - Winston-Salem</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>CT - Connecticut</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>DE - Delaware</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>ME - Maine</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>NH - New Hampshire</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>RI - Rhode Island</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td> </td>
-        <td>VT - Vermont</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>IA - Iowa</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>AR - Arkansas</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>MS - Missouri</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>MT - Montana</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>ND - North Dakota</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>SD - South Dakota</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>UT - Utah</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>WY - Wyoming</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>AL - Alabama</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>WV - West Virigina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>PR - Puerto Rico</td>
-        <!-- <td>Caribbean</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>VI - Virgin Islands</td>
-        <!-- <td>Caribbean</td> -->
-      </tr>
-    </table>
-    <table id="myTable_1" style="min-width: 33%; cursor: pointer;">
+        <!-- <th onclick="sortTable_self(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th> -->
+        <th onclick="sortTable(1)" style="width:50%;">State <i class="fa fa-caret-down"></i></th>
+        <!-- <th onclick="sortTable_self(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
+      </tr>
+    
+          <tr>
+            <!-- <td>Albuquerque</td> -->
+            <td>NM - New Mexico</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Anaheim</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Anchorage</td> -->
+            <td>AK - Alaska</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Arlington</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Atlanta</td> -->
+            <td>GA - Georgia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Aurora</td> -->
+            <td>CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Austin</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Bakersfield</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Baltimore</td> -->
+            <td>MD - Maryland</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Baton Rouge</td> -->
+            <td>LA - Louisiana</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Boise</td> -->
+            <td>ID - Idaho</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Boston</td> -->
+            <td>MA - Massachusetts</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Buffalo</td> -->
+            <td>NY - New York</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chandler</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Charlotte</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chesapeake</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chicago</td> -->
+            <td>IL - Illinois</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Chula Vista</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Cincinnati</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Cleveland</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Colorado Springs</td> -->
+            <td class="s1">CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Columbus</td> -->
+            <td>South Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Corpus Christi</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Dallas</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Denver</td> -->
+            <td>CO - Colorado</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Detroit</td> -->
+            <td>MI - Michigan</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Durham</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <!-- <td>El Paso</td> -->
+          <td>TX - Texas</td>
+          <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fort Wayne</td> -->
+            <td>IN - Indiana</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fort Worth</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fremont</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Fresno</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Garland</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Gilbert</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Glendale</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Greensboro</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Henderson</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Hialeah</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Honolulu</td> -->
+            <td>HI - Hawaii</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Houston</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Indianapolis</td> -->
+            <td>IN - Indiana</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Irvine</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Irving</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Jacksonville</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Jersey City</td> -->
+            <td>NJ - New Jersey</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Kansas City</td> -->
+            <td>MO - Missouri</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Laredo</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Las Vegas</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lexington</td> -->
+            <td>KY - Kentucky</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lincoln</td> -->
+            <td>NE - Nebraska</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Long Beach</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Los Angeles</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Louisville</td> -->
+            <td>KY - Kentucky</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Lubbock</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Madison</td> -->
+            <td>WI - Wisconsin</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Memphis</td> -->
+            <td>TN - Tennessee</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Mesa</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Miami</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Milwaukee</td> -->
+            <td>WI - Wisconsin</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Minneapolis</td> -->
+            <td>MN - Minnesota</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Nashville</td> -->
+            <td>TN - Tennessee</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>New York City</td> -->
+            <td>NY - New York</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>New Orleans</td> -->
+            <td>LA - Louisiana</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Newark</td> -->
+            <td>NJ - New Jersey</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Norfolk</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>North Las Vegas</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Oakland</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Oklahoma City</td> -->
+            <td>OK - Oklahoma</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Omaha</td> -->
+            <td>NE - Nebraska</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Orlando</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Philadelphia</td> -->
+            <td>PA - Pennsylvania</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Phoenix</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Pittsburgh</td> -->
+            <td>PA - Pennsylvania</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Plano</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Portland</td> -->
+            <td>OR - Oregon</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Raleigh</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Reno</td> -->
+            <td>NV - Nevada</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Richmond</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Riverside</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Sacramento</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Antonio</td> -->
+            <td>TX - Texas</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Diego</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Francisco</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>San Jose</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Santa Ana</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Scottsdale</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Seattle</td> -->
+            <td>WA - Washington</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Spokane</td> -->
+            <td>WA - Washington</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Louis</td> -->
+            <td>MO - Missouri</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Paul</td> -->
+            <td>MN - Minnesota</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>St Petersburg</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Stockton</td> -->
+            <td>CA - California</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tampa</td> -->
+            <td>FL - Florida</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Toledo</td> -->
+            <td>OH - Ohio</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tucson</td> -->
+            <td>AZ - Arizona</td>
+            <!-- <td>West</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Tulsa</td> -->
+            <td>OK - Oklahoma</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Virginia Beach</td> -->
+            <td>VA - Virginia</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Washington</td> -->
+            <td>DC - Washington DC</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Wichita</td> -->
+            <td>KS - Kansas</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td>Winston-Salem</td> -->
+            <td>NC - North Carolina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>CT - Connecticut</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>DE - Delaware</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>ME - Maine</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>NH - New Hampshire</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>RI - Rhode Island</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td> </td> -->
+            <td>VT - Vermont</td>
+            <!-- <td>Northeast</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>IA - Iowa</td>
+            <!-- <td>Midwest</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>AR - Arkansas</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>MS - Missouri</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>MT - Montana</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>ND - North Dakota</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>SD - South Dakota</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>UT - Utah</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>WY - Wyoming</td>
+            <!-- <td>Central</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>AL - Alabama</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>WV - West Virigina</td>
+            <!-- <td>South</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>PR - Puerto Rico</td>
+            <!-- <td>Caribbean</td> -->
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>VI - Virgin Islands</td>
+            <!-- <td>Caribbean</td> -->
+          </tr>
+        </table>
+    <table id="myTable_1" style="min-width: 50%; cursor: pointer;">
 
       <tr class="header">
-        <th onclick="sortTable(0)" style="width:33%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
+        <th onclick="sortTable(0)" style="width:50%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
       </tr>
 
       <!-- <tr>
@@ -715,692 +1382,7 @@
 
   <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div>
 
-  <h2>HIV Testing Measure</h2>
-  <div id="chartdiv_1" style="height:430px;"></div>
-
-
-  <!--onblur="document.getElementById('myTable').style.display='none';"
-   onfocus="document.getElementById('myTable').style.display='inherit';"-->
-  <!-- <input type="text" onfocus="document.getElementById('myTable_2').style.display='table';" id="myInput_1" onkeyup="searchFunction_self()" placeholder="Add a City, State, or Region..." title="Location Search Bar">
-  <button id="locbutton_1" onclick="getLocation_self()">Add My State</button> -->
-
-  <p id="demo_1"></p>
-
-  <div id="floating-panel_1">
-    <input id="latlng_1" type="text">
-    <input id="txtOutput_1" type="text">
-    <input id="stateOutput_1" type="text">
-  </div>
-
-  <div id="map_1"></div>
-
-  <div class="container table-wrapper-scroll-y_1 my-custom-scrollbar_1" style="width: 100%; cursor: pointer;">
-    <table id="myTable_2" style="min-width: 66%; cursor: pointer;">
-
-      <tr class="header">
-        <th onclick="sortTable_self(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th>
-        <th onclick="sortTable_self(1)" style="width:33%;">State <i class="fa fa-caret-down"></i></th>
-        <!-- <th onclick="sortTable_self(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
-      </tr>
-
-      <tr>
-        <td>NM-Albuquerque</td>
-        <td>NM - New Mexico</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA-Anaheim</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AK - Anchorage</td>
-        <td>AK - Alaska</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Arlington</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>GA - Atlanta</td>
-        <td>GA - Georgia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CO - Aurora</td>
-        <td>CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>TX - Austin</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Bakersfield</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>MD - Baltimore</td>
-        <td>MD - Maryland</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>LA - Baton Rouge</td>
-        <td>LA - Louisiana</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>ID - Boise</td>
-        <td>ID - Idaho</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>MA - Boston</td>
-        <td>MA - Massachusetts</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>NY - Buffalo</td>
-        <td>NY - New York</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Chandler</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Charlotte</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>VA - Chesapeake</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IL - Chicago</td>
-        <td>IL - Illinois</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CA - Chula Vista</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OH - Cincinnati</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>OH - Cleveland</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CO - Colorado Springs</td>
-        <td class="s1">CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>SC - Columbus</td>
-        <td>SC - South Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>TX - Corpus Christi</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>TX - Dallas</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CO - Denver</td>
-        <td>CO - Colorado</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>MI - Detroit</td>
-        <td>MI - Michigan</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>NC - Durham</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <td>TX - El Paso</td>
-      <td>TX - Texas</td>
-      <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IN - Fort Wayne</td>
-        <td>IN - Indiana</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Fort Worth</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Fremont</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Fresno</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Garland</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Gilbert</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Glendale</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Greensboro</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Henderson</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>FL - Hialeah</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>HI - Honolulu</td>
-        <td>HI - Hawaii</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Houston</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>IN - Indianapolis</td>
-        <td>IN - Indiana</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>CA - Irvine</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - Irving</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>FL - Jacksonville</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NJ - Jersey City</td>
-        <td>NJ - New Jersey</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>MO - Kansas City</td>
-        <td>MO - Missouri</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Laredo</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Las Vegas</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>KY - Lexington</td>
-        <td>KY - Kentucky</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>NE - Lincoln</td>
-        <td>NE - Nebraska</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA - Long Beach</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Los Angeles</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>KY - Louisville</td>
-        <td>KY - Kentucky</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TX - Lubbock</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>WI - Madison</td>
-        <td>WI - Wisconsin</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TN - Memphis</td>
-        <td>TN - Tennessee</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Mesa</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>FL - Miami</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>WI - Milwaukee</td>
-        <td>WI - Wisconsin</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>MN - Minneapolis</td>
-        <td>MN - Minnesota</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>TN - Nashville</td>
-        <td>TN - Tennessee</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NY - New York City</td>
-        <td>NY - New York</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>LA - New Orleans</td>
-        <td>LA - Louisiana</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NJ - Newark</td>
-        <td>NJ - New Jersey</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>VA - Norfolk</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - North Las Vegas</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>CA - Oakland</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OK - Oklahoma City</td>
-        <td>OK - Oklahoma</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>NE - Omaha</td>
-        <td>NE - Nebraska</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>FL - Orlando</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>PA - Philadelphia</td>
-        <td>PA - Pennsylvania</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Phoenix</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>PA - Pittsburgh</td>
-        <td>PA - Pennsylvania</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>TX - Plano</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>OR - Portland</td>
-        <td>OR - Oregon</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>NC - Raleigh</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>NV - Reno</td>
-        <td>NV - Nevada</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>VA - Richmond</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Riverside</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Sacramento</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>TX - San Antonio</td>
-        <td>TX - Texas</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - San Diego</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - San Francisco</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - San Jose</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>CA - Santa Ana</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Scottsdale</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>WA - Seattle</td>
-        <td>WA - Washington</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>WA - Spokane</td>
-        <td>WA - Washington</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>MO - St Louis</td>
-        <td>MO - Missouri</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>MN - St Paul</td>
-        <td>MN - Minnesota</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>FL - St Petersburg</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>CA - Stockton</td>
-        <td>CA - California</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>FL - Tampa</td>
-        <td>FL - Florida</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>OH - Toledo</td>
-        <td>OH - Ohio</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td>AZ - Tucson</td>
-        <td>AZ - Arizona</td>
-        <!-- <td>West</td> -->
-      </tr>
-      <tr>
-        <td>OK - Tulsa</td>
-        <td>OK - Oklahoma</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>VA - Virginia Beach</td>
-        <td>VA - Virginia</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td>DC - Washington</td>
-        <td>DC - Washington DC</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td>KS - Wichita</td>
-        <td>KS - Kansas</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td>NC - Winston-Salem</td>
-        <td>NC - North Carolina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>CT - Connecticut</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>DE - Delaware</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>ME - Maine</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>NH - New Hampshire</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>RI - Rhode Island</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td> </td>
-        <td>VT - Vermont</td>
-        <!-- <td>Northeast</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>IA - Iowa</td>
-        <!-- <td>Midwest</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>AR - Arkansas</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>MS - Missouri</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>MT - Montana</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>ND - North Dakota</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>SD - South Dakota</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>UT - Utah</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>WY - Wyoming</td>
-        <!-- <td>Central</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>AL - Alabama</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>WV - West Virigina</td>
-        <!-- <td>South</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>PR - Puerto Rico</td>
-        <!-- <td>Caribbean</td> -->
-      </tr>
-      <tr>
-        <td></td>
-        <td>VI - Virgin Islands</td>
-        <!-- <td>Caribbean</td> -->
-      </tr>
-    </table>
-    <table id="myTable_3" style="min-width: 33%; cursor: pointer;">
-
-      <tr class="header">
-        <th onclick="sortTable_self(0)" style="width:33%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
-      </tr>
-
-      <!-- <tr>
-        <td>Test-Sum</td>
-      </tr> -->
-      <tr>
-        <td>test</td>
-      </tr>
-      <tr>
-        <td>tests</td>
-      </tr>
-      <tr>
-        <td>tested</td>
-      </tr>
-      <tr>
-        <td>testing</td>
-      </tr>
-      <tr>
-        <td>oraquick</td>
-      </tr>
-
-    </table>
-  </div>
-
-  <div style="margin:1em;"></div>
-  <!-- <p>
-    Undo: findings. 
-  </p> -->
-
-
-  <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div>
-
-  <!-- <h2>Average HIV-prep and test Tweets by State</h2>
-  <p>Use this figure to compare total number of tweets by area.
-  </p>
-  <div class="row">
-    <div class="column1" id="heatchartdiv" style="height:430px;"></div>
-    <div class="column2">
-      <h3 style="text-decoration: underline;">Statistics by State:</h3>
-      <div id="info"></div>
-    </div>
-  </div>
-  <div style="margin:2em;"></div> -->
-
-  <div style="margin:1em;"></div>
-
-  <!-- <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div> -->
-
-  <h2>Average HIV-PrEP Tweets by State</h2>
-  <!-- <p>Use this figure to compare total number of tweets by area.
-  </p> -->
-  <div class="row">
-    <div class="column1" id="heatPrEPdiv" style="height:430px;"></div>
-    <div class="column2">
-      <h3 style="text-decoration: underline;">Statistics by State:</h3>
-      <div id="info_p"></div>
-    </div>
-  </div>
-  <!-- <div id="heatPrEPdiv" style="height:430px;"></div> -->
-  <div style="margin:2em;"></div>
-
-  <!-- <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div> -->
-
-  <h2>Average HIV-Testing Tweets by State</h2>
+  <h2>HIV-Testing Tweets by State (Jan 2023)</h2>
   <!-- <p>Use this figure to compare total number of tweets by area.
   </p> -->
   <div class="row">
@@ -1416,6 +1398,21 @@
   <!-- <p>
     Undo: findings. 
   </p> -->
+
+  <h2>HIV-PrEP Tweets by State (Jan 2023)</h2>
+  <!-- <p>Use this figure to compare total number of tweets by area.
+  </p> -->
+  <div class="row">
+    <div class="column1" id="heatPrEPdiv" style="height:430px;"></div>
+    <div class="column2">
+      <h3 style="text-decoration: underline;">Statistics by State:</h3>
+      <div id="info_p"></div>
+    </div>
+  </div>
+  <!-- <div id="heatPrEPdiv" style="height:430px;"></div> -->
+  <div style="margin:2em;"></div>
+
+  <!-- <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div> -->
 
   <!-- <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div> -->
 
@@ -1437,12 +1434,12 @@
   <div style="margin:2em;"></div>
 
   <!-- <h3 style="text-decoration: underline;">Statistics by Country:</h3> -->
-  <h2>Top 10 cities with HIV-Tweets</HIV-Tweets></h2>
+  <!-- <h2>Top 10 cities with HIV-Tweets</HIV-Tweets></h2>
   <p>
     It shows 10 cities with the most summation of HIV PrEP and Testing tweets. <strong><em>Click</em></strong> the cities to learn the proportion of PrEP/Testing tweets in each city. 
-  </p>
+  </p> -->
   <!-- <div id="pieUS_chartdiv"></div> -->
-  <div id="pieUS_chartdiv"></div>
+  <!-- <div id="pieUS_chartdiv"></div> -->
 
   <div style="margin:2em;"></div>
   <div style="margin:1.5em; border-bottom: 3px dotted #042039"></div>

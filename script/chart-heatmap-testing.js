@@ -77,37 +77,37 @@ polygonTemplate_t.strokeWidth = 0.5;
 // Onclick for states, open its stats
 polygonTemplate_t.events.on("hit", function(ev) {
   var data_t = ev.target.dataItem.dataContext;
-  var info_t = document.getElementById("info");
-  // info.innerHTML = "<h3>" + data.name + "<br>" + " (" + data.id + ")</h3>";
-  // if (data.id) {
-  //   info.innerHTML += "Average number of HIV Testing Tweets: " + data.HIV_Testing +
-  //   "<br>" + "Average number of HIV Prep Tweets: " + data.HIV_trep +
-  //   "<br>" + "Average Total: " + data.value;
-  // } else {
-  //   info.innerHTML += "<i>No description provided.</i>"
-  // }
+  var info_t = document.getElementById("info_t");
+  info_t.innerHTML = "<h3>" + data_t.name + "<br>" + " (" + data_t.id + ")</h3>";
+  if (data_t.id) {
+    info_t.innerHTML += "<b>" + "Average number of HIV Testing Tweets: " + data_t.value + "</b>" + 
+    "<br>" + "Average number of HIV PrEP Tweets: " + data_t.HIV_Prep +
+    "<br>" + "Average Total: " + data_t.total;
+  } else {
+    info_t.innerHTML += "<i>No description provided.</i>"
+  }
 });
 
 // Start info with US averages
-// var info = document.getElementById("info");
-// info.innerHTML = "<h3> United States Average </h3>";
-// info.innerHTML += "Average number of HIV Testing Tweets: " + 7776.94 +
-//   "<br>" + "Average number of HIV Prep Tweets: " + 1964.26 +
-//   "<br>" + "Total: " + 9741.20;
+var info_t = document.getElementById("info_t");
+info_t.innerHTML = "<h3> United States Average </h3>";
+info_t.innerHTML += "<b>" + "Average number of HIV Testing Tweets: " + 7776.94 + "</b>" +
+  "<br>" + "Average number of HIV PrEP Tweets: " + 1964.26 +
+  "<br>" + "Total: " + 9741.20;
 
 // Onclick for states, open its stats
-// polygonTemplate.events.on("hit", function(ev) {
-//   var data = ev.target.dataItem.dataContext;
-//   var info = document.getElementById("info");
-//   info.innerHTML = "<h3>" + data.name + "<br>" + " (" + data.id + ")</h3>";
-//   if (data.id) {
-//     info.innerHTML += "Average number of HIV Testing Tweets: " + data.HIV_Testing +
-//     "<br>" + "Average number of HIV Prep Tweets: " + data.HIV_trep +
-//     "<br>" + "Average Total: " + data.value;
-//   } else {
-//     info.innerHTML += "<i>No description provided.</i>"
-//   }
-// });
+polygonTemplate.events.on("hit", function(ev) {
+  var data_t = ev.target.dataItem.dataContext;
+  var info_t = document.getElementById("info");
+  info_t.innerHTML = "<h3>" + data_t.name + "<br>" + " (" + data_t.id + ")</h3>";
+  if (data_t.id) {
+    info_t.innerHTML += "<b>" + "Average number of HIV Testing Tweets: " + data_t.value + "</b>" +
+    "<br>" + "Average number of HIV PrEP Tweets: " + data_t.HIV_Prep +
+    "<br>" + "Average Total: " + data_t.total;
+  } else {
+    info_t.innerHTML += "<i>No description provided.</i>"
+  }
+});
 
 // Create hover state and set alternative fill color
 var hs_t = polygonTemplate_t.states.create("hover");

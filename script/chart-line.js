@@ -88,94 +88,94 @@ chart.events.on("ready", function () {
 /*
   Geolocation with HTML5
 */
-var x = document.getElementById("demo");
+// var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//   } else {
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
 
 /*
   Plotting on map disabled
   Reverse geocoding based on longitude & latitude
 */
-function showPosition(position) {
-  // initialize Google Maps
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: {lat: position.coords.latitude, lng: position.coords.longitude}
-  });
+// function showPosition(position) {
+//   // initialize Google Maps
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 8,
+//     center: {lat: position.coords.latitude, lng: position.coords.longitude}
+//   });
 
-  var geocoder = new google.maps.Geocoder;
-  var infowindow = new google.maps.InfoWindow;
+//   var geocoder = new google.maps.Geocoder;
+//   var infowindow = new google.maps.InfoWindow;
 
-  // input right latitude & longitude to search box
-  var latlng = document.getElementById("latlng");
-  latlng.value = position.coords.latitude + "," + position.coords.longitude;
+//   // input right latitude & longitude to search box
+//   var latlng = document.getElementById("latlng");
+//   latlng.value = position.coords.latitude + "," + position.coords.longitude;
 
-  var input = document.getElementById('latlng').value;
-  var latlngStr = input.split(',', 2);
-  var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+//   var input = document.getElementById('latlng').value;
+//   var latlngStr = input.split(',', 2);
+//   var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
 
-  geocoder.geocode({'location': latlng}, function(results, status) {
-    if (status === 'OK') {
-      if (results[0]) {
-        var txtOutput = document.getElementById("txtOutput");
-        txtOutput.value = results[0].formatted_address;
+//   geocoder.geocode({'location': latlng}, function(results, status) {
+//     if (status === 'OK') {
+//       if (results[0]) {
+//         var txtOutput = document.getElementById("txtOutput");
+//         txtOutput.value = results[0].formatted_address;
 
-      } else {
-        window.alert('No results found');
-      }
-    } else {
-      window.alert('Geocoder failed due to: ' + status);
-    }
+//       } else {
+//         window.alert('No results found');
+//       }
+//     } else {
+//       window.alert('Geocoder failed due to: ' + status);
+//     }
 
-    var str = results[0].formatted_address;
-    var res = str.split(", ");
-    var stateOutput = document.getElementById("stateOutput");
-    stateOutput.value = res[2].substring(0, 2);
-    createSeries(res[2].substring(0, 2), res[2].substring(0, 2), "circle", false);
-  });
-}
+//     var str = results[0].formatted_address;
+//     var res = str.split(", ");
+//     var stateOutput = document.getElementById("stateOutput");
+//     stateOutput.value = res[2].substring(0, 2);
+//     createSeries(res[2].substring(0, 2), res[2].substring(0, 2), "circle", false);
+//   });
+// }
 
 /*
-  Search City, State, Region
+  Search City, State
 */
-function searchFunction_kw() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    td2 = tr[i].getElementsByTagName("td")[1];
-    // td3 = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-    if (td2) {
-      txtValue = td2.textContent || td2.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      }
-    }
-    if (td3) {
-      txtValue = td3.textContent || td3.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      }
-    }
-  }
-}
+// function searchFunction() {
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("myTable");
+//   tr = table.getElementsByTagName("tr");
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[0];
+//     td2 = tr[i].getElementsByTagName("td")[1];
+//     // td3 = tr[i].getElementsByTagName("td")[2];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//     if (td2) {
+//       txtValue = td2.textContent || td2.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       }
+//     }
+//     // if (td3) {
+//     //   txtValue = td3.textContent || td3.innerText;
+//     //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//     //     tr[i].style.display = "";
+//     //   }
+//     // }
+//   }
+// }
 
 /*
   Sort table A-Z or Z-A
@@ -253,38 +253,38 @@ if (table != null) {
 /*
   Search Key_words
 */
-function searchFunction_kw() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable_1");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    // td2 = tr[i].getElementsByTagName("td")[1];
-    // td3 = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-    // if (td2) {
-    //   txtValue = td2.textContent || td2.innerText;
-    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //     tr[i].style.display = "";
-    //   }
-    // }
-    // if (td3) {
-    //   txtValue = td3.textContent || td3.innerText;
-    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //     tr[i].style.display = "";
-    //   }
-    // }
-  }
-}
+// function searchFunction_kw() {
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("myTable_1");
+//   tr = table.getElementsByTagName("tr");
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[0];
+//     // td2 = tr[i].getElementsByTagName("td")[1];
+//     // td3 = tr[i].getElementsByTagName("td")[2];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//     // if (td2) {
+//     //   txtValue = td2.textContent || td2.innerText;
+//     //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//     //     tr[i].style.display = "";
+//     //   }
+//     // }
+//     // if (td3) {
+//     //   txtValue = td3.textContent || td3.innerText;
+//     //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//     //     tr[i].style.display = "";
+//     //   }
+//     // }
+//   }
+// }
 
 
 /*

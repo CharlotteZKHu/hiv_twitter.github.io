@@ -61,10 +61,10 @@
   <div id="chartdiv" style="height:430px;"></div>
 
 
-  <!--onblur="document.getElementById('myTable').style.display='none';"
-   onfocus="document.getElementById('myTable').style.display='inherit';"-->
-  <!-- <input type="text" onfocus="document.getElementById('myTable').style.display='table';" id="myInput" onkeyup="searchFunction()" placeholder="Add a City, State, or Region..." title="Location Search Bar"> -->
-  <!-- <button id="locbutton" onclick="getLocation()">Add My State</button> -->
+  <!-- onblur="document.getElementById('myTable').style.display='none';"
+   onfocus="document.getElementById('myTable').style.display='inherit';" -->
+  <!-- <input type="text" onfocus="document.getElementById('myTable').style.display='table';" id="myInput" onkeyup="searchFunction()" placeholder="Add a City, State, or Region..." title="Location Search Bar">
+  <button id="locbutton" onclick="getLocation()">Add My State</button> -->
 
   <p id="demo"></p>
 
@@ -340,7 +340,7 @@
         <!-- <td>West</td> -->
       </tr>
       <tr>
-        <td>CA - Los Angeles</td>
+        <td>Los Angeles</td>
         <td>CA - California</td>
         <!-- <td>West</td> -->
       </tr>
@@ -490,7 +490,7 @@
         <!-- <td>South</td> -->
       </tr>
       <tr>
-        <td>CA - San Diego</td>
+        <td>San Diego</td>
         <td>CA - California</td>
         <!-- <td>West</td> -->
       </tr>
@@ -681,9 +681,9 @@
         <th onclick="sortTable(0)" style="width:33%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
       </tr>
 
-      <tr>
+      <!-- <tr>
         <td>PrEP-Sum</td>
-      </tr>
+      </tr> -->
       <tr>
         <td>prep</td>
       </tr>
@@ -738,9 +738,9 @@
     <table id="myTable_2" style="min-width: 66%; cursor: pointer;">
 
       <tr class="header">
-        <th onclick="sortTable(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th>
-        <th onclick="sortTable(1)" style="width:33%;">State <i class="fa fa-caret-down"></i></th>
-        <!-- <th onclick="sortTable(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
+        <th onclick="sortTable_self(0)" style="width:33%;">City <i class="fa fa-caret-down"></i></th>
+        <th onclick="sortTable_self(1)" style="width:33%;">State <i class="fa fa-caret-down"></i></th>
+        <!-- <th onclick="sortTable_self(2)" style="width:33%;">Region <i class="fa fa-caret-down"></i></th> -->
       </tr>
 
       <tr>
@@ -1339,9 +1339,9 @@
         <th onclick="sortTable_self(0)" style="width:33%;">Keywords-Total<i class="fa fa-caret-down"></i></th>
       </tr>
 
-      <tr>
+      <!-- <tr>
         <td>Test-Sum</td>
-      </tr>
+      </tr> -->
       <tr>
         <td>test</td>
       </tr>

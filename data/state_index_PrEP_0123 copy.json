@@ -1,0 +1,302 @@
+[
+    {
+        "id": "US-AL",
+        "value": "8",
+        "HIV_Testing": "8",
+        "total": "16"
+    },
+    {
+        "id": "US-AK",
+        "value": "0",
+        "HIV_Testing": "0",
+        "total": "0"
+    },
+    {
+        "id": "US-AZ",
+        "value": "5",
+        "HIV_Testing": "24",
+        "total": "29"
+    },
+    {
+        "id": "US-AR",
+        "value": "3",
+        "HIV_Testing": "5",
+        "total": "8"
+    },
+    {
+        "id": "US-CA",
+        "value": "117",
+        "HIV_Testing": "181",
+        "total": "298"
+    },
+    {
+        "id": "US-CO",
+        "value": "12",
+        "HIV_Testing": "12",
+        "total": "24"
+    },
+    {
+        "id": "US-CT",
+        "value": "7",
+        "HIV_Testing": "21",
+        "total": "28"
+    },
+    {
+        "id": "US-DE",
+        "value": "2",
+        "HIV_Testing": "1",
+        "total": "3"
+    },
+    {
+        "id": "US-FL",
+        "value": "118",
+        "HIV_Testing": "168",
+        "total": "286"
+    },
+    {
+        "id": "US-GA",
+        "value": "47",
+        "HIV_Testing": "80",
+        "total": "127"
+    },
+    {
+        "id": "US-HI",
+        "value": "4",
+        "HIV_Testing": "9",
+        "total": "13"
+    },
+    {
+        "id": "US-ID",
+        "value": "2",
+        "HIV_Testing": "3",
+        "total": "5"
+    },
+    {
+        "id": "US-IL",
+        "value": "31",
+        "HIV_Testing": "36",
+        "total": "67"
+    },
+    {
+        "id": "US-IN",
+        "value": "10",
+        "HIV_Testing": "29",
+        "total": "39"
+    },
+    {
+        "id": "US-IA",
+        "value": "1",
+        "HIV_Testing": "6",
+        "total": "7"
+    },
+    {
+        "id": "US-KS",
+        "value": "3",
+        "HIV_Testing": "4",
+        "total": "7"
+    },
+    {
+        "id": "US-KY",
+        "value": "3",
+        "HIV_Testing": "7",
+        "total": "10"
+    },
+    {
+        "id": "US-LA",
+        "value": "2",
+        "HIV_Testing": "8",
+        "total": "10"
+    },
+    {
+        "id": "US-ME",
+        "value": "0",
+        "HIV_Testing": "0",
+        "total": "0"
+    },
+    {
+        "id": "US-MD",
+        "value": "23",
+        "HIV_Testing": "34",
+        "total": "57"
+    },
+    {
+        "id": "US-MA",
+        "value": "19",
+        "HIV_Testing": "22",
+        "total": "41"
+    },
+    {
+        "id": "US-MI",
+        "value": "6",
+        "HIV_Testing": "26",
+        "total": "32"
+    },
+    {
+        "id": "US-MN",
+        "value": "17",
+        "HIV_Testing": "13",
+        "total": "30"
+    },
+    {
+        "id": "US-MS",
+        "value": "4",
+        "HIV_Testing": "12",
+        "total": "16"
+    },
+    {
+        "id": "US-MO",
+        "value": "15",
+        "HIV_Testing": "14",
+        "total": "29"
+    },
+    {
+        "id": "US-MT",
+        "value": "0",
+        "HIV_Testing": "0",
+        "total": "0"
+    },
+    {
+        "id": "US-NE",
+        "value": "0",
+        "HIV_Testing": "11",
+        "total": "11"
+    },
+    {
+        "id": "US-NV",
+        "value": "7",
+        "HIV_Testing": "26",
+        "total": "33"
+    },
+    {
+        "id": "US-NH",
+        "value": "1",
+        "HIV_Testing": "23",
+        "total": "24"
+    },
+    {
+        "id": "US-NJ",
+        "value": "18",
+        "HIV_Testing": "35",
+        "total": "53"
+    },
+    {
+        "id": "US-NM",
+        "value": "1",
+        "HIV_Testing": "2",
+        "total": "3"
+    },
+    {
+        "id": "US-NY",
+        "value": "137",
+        "HIV_Testing": "178",
+        "total": "315"
+    },
+    {
+        "id": "US-NC",
+        "value": "29",
+        "HIV_Testing": "34",
+        "total": "63"
+    },
+    {
+        "id": "US-ND",
+        "value": "0",
+        "HIV_Testing": "0",
+        "total": "0"
+    },
+    {
+        "id": "US-OH",
+        "value": "24",
+        "HIV_Testing": "47",
+        "total": "71"
+    },
+    {
+        "id": "US-OK",
+        "value": "4",
+        "HIV_Testing": "13",
+        "total": "17"
+    },
+    {
+        "id": "US-OR",
+        "value": "7",
+        "HIV_Testing": "10",
+        "total": "17"
+    },
+    {
+        "id": "US-PA",
+        "value": "225",
+        "HIV_Testing": "498",
+        "total": "723"
+    },
+    {
+        "id": "US-RI",
+        "value": "2",
+        "HIV_Testing": "5",
+        "total": "7"
+    },
+    {
+        "id": "US-SC",
+        "value": "3",
+        "HIV_Testing": "14",
+        "total": "17"
+    },
+    {
+        "id": "US-SD",
+        "value": "0",
+        "HIV_Testing": "1",
+        "total": "1"
+    },
+    {
+        "id": "US-TN",
+        "value": "10",
+        "HIV_Testing": "114",
+        "total": "124"
+    },
+    {
+        "id": "US-TX",
+        "value": "80",
+        "HIV_Testing": "109",
+        "total": "189"
+    },
+    {
+        "id": "US-UT",
+        "value": "2",
+        "HIV_Testing": "3",
+        "total": "5"
+    },
+    {
+        "id": "US-VT",
+        "value": "0",
+        "HIV_Testing": "0",
+        "total": "0"
+    },
+    {
+        "id": "US-VA",
+        "value": "11",
+        "HIV_Testing": "20",
+        "total": "31"
+    },
+    {
+        "id": "US-WA",
+        "value": "13",
+        "HIV_Testing": "27",
+        "total": "40"
+    },
+    {
+        "id": "US-WV",
+        "value": "0",
+        "HIV_Testing": "2",
+        "total": "2"
+    },
+    {
+        "id": "US-WI",
+        "value": "10",
+        "HIV_Testing": "7",
+        "total": "17"
+    },
+    {
+        "id": "US-WY",
+        "value": "0",
+        "HIV_Testing": "1",
+        "total": "1"
+    }
+]

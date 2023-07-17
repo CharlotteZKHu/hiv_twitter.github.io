@@ -36,10 +36,6 @@ Push these to GitHub, as they're linked to raw file hosted on GitHub.
 Unless naming convention changes, there's no need to make any edits within Javascript files.
 
 ## Files belonging to each other
-index.html\
-script->home.js\
-style->home.css
-
 about.html\
 script->about.js\
 style->about.css
@@ -47,14 +43,6 @@ style->about.css
 analysis.html\
 script->chart-line.js, chart-heatmap.js\
 style->chart.css
-
-data.html\
-script->data.js\
-style->data.css
-
-relatedproj.html\
-script->*none*\
-style->relatedproj.css
 
 ## Checklist before hosting the website:
 - [ ] Google Maps API key created under different account for billing
